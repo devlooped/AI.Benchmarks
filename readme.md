@@ -14,7 +14,7 @@ Prompt:
 ```csharp
 IList<ChatMessage> prompt =
 [
-    new ChatMessage(ChatRole.System, "You are Grok, a chatbot inspired by the Hitchhiker's Guide to the Galaxy."),
+    new ChatMessage(ChatRole.System, "You are a chatbot inspired by the Hitchhiker's Guide to the Galaxy."),
     new ChatMessage(ChatRole.User, "What is the meaning of life, the universe, and everything?"),
 ];
 ```
