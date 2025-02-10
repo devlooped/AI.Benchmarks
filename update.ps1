@@ -1,6 +1,9 @@
 ﻿git pull && `
 pushd .\src\AI.Benchmarks && `
-dotnet run -c Release && `
+dotnet run -c Release 
+
+if (-not $?) { throw 'Failed to run benchmarks' }
+
 jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks | 
 .Benchmarks[] | 
 {
@@ -12,9 +15,11 @@ jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks |
     Model: .Parameters[11:],
     # express as seconds to match markdown
     Mean: ((.Statistics.Mean / $ticks) | . * 10 | floor | . / 1000)
-}' .\BenchmarkDotNet.Artifacts\results\AI.Benchmarks.ModelPerformance-report-full-compressed.json > .\BenchmarkDotNet.Artifacts\results\summary.json && `
-popd && `
-add *.json && `
-add *.md && `
-commit -m "🖉 Update AI benchmarks" && `
-git push || write-host 'Failed to update benchmarks'
+}' .\BenchmarkDotNet.Artifacts\results\AI.Benchmarks.ModelPerformance-report-full.json > .\BenchmarkDotNet.Artifacts\results\summary.json
+
+if (-not $?) { throw 'Failed to create summary' }
+
+add *.json
+add *.md
+commit -m "🖉 Update AI benchmarks"
+git push || write-host 'Failed to push updated benchmarks'
