@@ -1,4 +1,8 @@
-﻿﻿name: Benchmark
+# Collects benchmarks in gh-pages
+# See https://github.com/benchmark-action/github-action-benchmark/blob/master/examples/benchmarkdotnet/README.md
+
+name: Benchmark
+
 on:
   workflow_dispatch:
   push:
@@ -6,6 +10,7 @@ on:
       - main
     paths:
       - 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/*.json'
+
 jobs:
   benchmark:
     runs-on: ubuntu-latest
