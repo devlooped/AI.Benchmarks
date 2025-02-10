@@ -27,7 +27,8 @@ jobs:
       # gh-pages branch is updated and pushed automatically with extracted benchmark data
       - uses: benchmark-action/github-action-benchmark@v1
         with:
-          tool: 'benchmarkdotnet'
+          benchmark-data-dir-path: docs
+          tool: benchmarkdotnet
           output-file-path: 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/AI.Benchmarks.ModelPerformance-report-full.json'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Push and deploy GitHub pages branch automatically
