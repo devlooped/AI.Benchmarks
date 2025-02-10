@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/*.json'
+      - 'artifacts/results/*.json'
 
 jobs:
   benchmark:
@@ -29,7 +29,7 @@ jobs:
         with:
           benchmark-data-dir-path: docs
           tool: benchmarkdotnet
-          output-file-path: 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/AI.Benchmarks.ModelPerformance-report-full.json'
+          output-file-path: 'artifacts/results/AI.Benchmarks.ModelPerformance-report-full.json'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Push and deploy GitHub pages branch automatically
           auto-push: true
