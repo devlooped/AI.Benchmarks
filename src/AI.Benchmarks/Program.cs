@@ -7,13 +7,13 @@ using BenchmarkDotNet.Running;
 BenchmarkRunner.Run<ModelPerformance>(ManualConfig
 #if DEBUG
     .Create(new DebugInProcessConfig())
-    .WithArtifactsPath(Path.Combine(ThisAssembly.Project.MSBuildProjectDirectory, "BenchmarkDotNet.Artifacts"))
 #else
     .Create(DefaultConfig.Instance)
     .AddExporter(BenchmarkDotNet.Exporters.Json.JsonExporter.Full)
 #endif
     .AddColumn(new ProviderColumn())
-    .AddColumn(new ModelColumn()),
+    .AddColumn(new ModelColumn())
+    .WithArtifactsPath(Path.Combine(ThisAssembly.Git.Root, "artifacts")),
 #if DEBUG
     args
 #else

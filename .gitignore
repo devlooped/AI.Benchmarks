@@ -4,7 +4,6 @@ artifacts
 pack
 TestResults
 results
-BenchmarkDotNet.Artifacts
 /app
 .vs
 .vscode

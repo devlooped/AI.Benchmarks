@@ -5,7 +5,7 @@ dotnet run -c Release
 if (-not $?) { throw 'Failed to run benchmarks' }
 
 jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks | 
-.Benchmarks[] | 
+.Benchmarks | map(
 {
     Provider: (({
         aai: "Azure AI",
@@ -15,7 +15,7 @@ jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks |
     Model: .Parameters[11:],
     # express as seconds to match markdown
     Mean: ((.Statistics.Mean / $ticks) | . * 10 | floor | . / 1000)
-}' .\BenchmarkDotNet.Artifacts\results\AI.Benchmarks.ModelPerformance-report-full.json > .\BenchmarkDotNet.Artifacts\results\summary.json
+})' .\artifacts\results\AI.Benchmarks.ModelPerformance-report-full.json > .\artifacts\summary.json
 
 if (-not $?) { throw 'Failed to create summary' }
 

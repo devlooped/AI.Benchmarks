@@ -9,6 +9,8 @@ Currently, comparison includes:
 * AzureAI: gpt-40, gpt-4o-mini
 * xAI: grok-beta, grok-2-latest
 
+![NuGet Packages](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fdevlooped%2Fnuget%2Fraw%2Frefs%2Fheads%2Fmain%2Fnuget.json&query=%24.summary.packages&style=social&logo=nuget&label=packages)
+
 Prompt:
 
 ```csharp

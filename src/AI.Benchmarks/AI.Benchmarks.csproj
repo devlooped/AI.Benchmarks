@@ -17,12 +17,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
     <PackageReference Include="System.Text.Json" Version="9.0.1" />
-    <PackageReference Include="ThisAssembly.Project" Version="2.0.10" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectProperty Include="MSBuildProjectDirectory" />
-    <ProjectProperty Include="RepositoryRoot" />
+    <PackageReference Include="ThisAssembly.Git" Version="2.0.11" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
   "profiles": {
     "AI.Benchmarks": {
       "commandName": "Project",
-      "commandLineArgs": "--exporters json-full --runOncePerIteration true --minWarmupCount 1 --maxWarmupCount 2 --iterationCount 1 --invocationCount 1 --unrollFactor 1"
+      "commandLineArgs": "--exporters fulljson --runOncePerIteration true --minWarmupCount 1 --maxWarmupCount 2 --iterationCount 1 --invocationCount 1 --unrollFactor 1"
     }
   }
 }
