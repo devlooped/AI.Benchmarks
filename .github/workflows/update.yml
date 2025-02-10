@@ -1,0 +1,39 @@
+﻿name: Update Benchmarks
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 1 * *"
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 🤖 defaults
+        uses: devlooped/actions-bot@v1
+        with:
+          name: ${{ secrets.BOT_NAME }}
+          email: ${{ secrets.BOT_EMAIL }}
+          gh_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 🤘 checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ env.GH_TOKEN }}
+          
+      - name: ⚙ update
+        working-directory: src/AI.Benchmarks
+        run: dotnet run -c Release
+
+      - name: +Mᐁ includes
+        uses: devlooped/actions-includes@v1
+
+      - name: ⬆️ commit
+        run: |
+          git add *.json
+          git add *.md
+          git commit -m "🖉 Update AI benchmarks"
+          git pull
+          git push

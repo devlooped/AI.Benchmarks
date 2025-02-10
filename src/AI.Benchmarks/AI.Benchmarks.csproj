@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Optimize>true</Optimize>
+    <ImplicitUsings>true</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>53ef4efc-52b8-4a0b-9e02-962a58d7dc97</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="9.1.0-preview.1.25064.3" />
+    <PackageReference Include="Microsoft.Extensions.AI.AzureAIInference" Version="9.1.0-preview.1.25064.3" />
+    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.1.0-preview.1.25064.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+    <PackageReference Include="System.Text.Json" Version="9.0.1" />
+    <PackageReference Include="ThisAssembly.Project" Version="2.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectProperty Include="MSBuildProjectDirectory" />
+  </ItemGroup>
+
+</Project>

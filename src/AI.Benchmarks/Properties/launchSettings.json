@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AI.Benchmarks": {
+      "commandName": "Project",
+      "commandLineArgs": "--exporters json --runOncePerIteration true --minWarmupCount 1 --maxWarmupCount 2 --iterationCount 1 --invocationCount 1 --unrollFactor 1"
+    }
+  }
+}
