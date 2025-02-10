@@ -7,7 +7,7 @@ Currently, comparison includes:
 
 * OpenAI: gpt-4o, gpt-4o-mini
 * AzureAI: gpt-40, gpt-4o-mini
-* xAI: grok-beta
+* xAI: grok-beta, grok-2-latest
 
 Prompt:
 
