@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/AI.Benchmarks.ModelPerformance-report-full.json'
+      - 'src/AI.Benchmarks/BenchmarkDotNet.Artifacts/results/*.json'
 jobs:
   benchmark:
     runs-on: ubuntu-latest
