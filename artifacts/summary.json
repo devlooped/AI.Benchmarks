@@ -2,31 +2,31 @@
   {
     "Provider": "Azure AI",
     "Model": "gpt-4o",
-    "Mean": 1.591
+    "Mean": 2.414
   },
   {
     "Provider": "Azure AI",
     "Model": "gpt-4o-mini",
-    "Mean": 2.681
+    "Mean": 2.748
   },
   {
     "Provider": "OpenAI",
     "Model": "gpt-4o",
-    "Mean": 2.522
+    "Mean": 2.646
   },
   {
     "Provider": "OpenAI",
     "Model": "gpt-4o-mini",
-    "Mean": 2.613
+    "Mean": 2.844
   },
   {
     "Provider": "xAI",
     "Model": "grok-2-latest",
-    "Mean": 3.002
+    "Mean": 1.628
   },
   {
     "Provider": "xAI",
     "Model": "grok-beta",
-    "Mean": 1.326
+    "Mean": 1.731
   }
 ]
