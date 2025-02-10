@@ -1,14 +1,17 @@
 ﻿using AI.Benchmarks;
 using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Exporters.Json;
 using BenchmarkDotNet.Reports;
 using BenchmarkDotNet.Running;
 
 BenchmarkRunner.Run<ModelPerformance>(ManualConfig
 #if DEBUG
     .Create(new DebugInProcessConfig())
+    .WithArtifactsPath(Path.Combine(ThisAssembly.Project.MSBuildProjectDirectory, "BenchmarkDotNet.Artifacts"))
 #else
     .Create(DefaultConfig.Instance)
+    .AddExporter(JsonExporter.Full)
 #endif
     .AddColumn(new ProviderColumn())
     .AddColumn(new ModelColumn()),
@@ -63,7 +66,7 @@ class ModelColumn : IColumn
 
     public ColumnCategory Category => ColumnCategory.Params;
 
-    public int PriorityInCategory => 0;
+    public int PriorityInCategory => 1;
 
     public bool IsNumeric => false;
 
