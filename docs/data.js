@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739666324442,
+  "lastUpdate": 1739676881792,
   "repoUrl": "https://github.com/devlooped/AI.Benchmarks",
   "entries": {
     "Benchmark": [
@@ -118,6 +118,66 @@ window.BENCHMARK_DATA = {
             "value": 2028181521.3483145,
             "unit": "ns",
             "range": "± 410013907.2121906"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "daniel@cazzulino.com",
+            "name": "Daniel Cazzulino",
+            "username": "kzu"
+          },
+          "committer": {
+            "email": "daniel@cazzulino.com",
+            "name": "Daniel Cazzulino",
+            "username": "kzu"
+          },
+          "distinct": true,
+          "id": "0b115b0850f0bf6b93567dc61e5a57b44a5a2048",
+          "message": "🖉 Update AI benchmarks",
+          "timestamp": "2025-02-16T00:34:12-03:00",
+          "tree_id": "00aedfdd1790e3827da5295dbb16944190d2aa30",
+          "url": "https://github.com/devlooped/AI.Benchmarks/commit/0b115b0850f0bf6b93567dc61e5a57b44a5a2048"
+        },
+        "date": 1739676880957,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"aai-gpt-4o\")",
+            "value": 1723694865.9340658,
+            "unit": "ns",
+            "range": "± 602910456.0707841"
+          },
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"aai-gpt-4o-mini\")",
+            "value": 1896654240.6976745,
+            "unit": "ns",
+            "range": "± 640708992.5425394"
+          },
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"oai-gpt-4o\")",
+            "value": 1677989905.2631578,
+            "unit": "ns",
+            "range": "± 340820544.350123"
+          },
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"oai-gpt-4o-mini\")",
+            "value": 2834592038.7755103,
+            "unit": "ns",
+            "range": "± 799547500.7554231"
+          },
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"xai-grok-2-latest\")",
+            "value": 1629145956.5656567,
+            "unit": "ns",
+            "range": "± 367640771.9471474"
+          },
+          {
+            "name": "AI.Benchmarks.ModelPerformance.Chat(Client: \"xai-grok-beta\")",
+            "value": 1677761416.6666667,
+            "unit": "ns",
+            "range": "± 319433063.61539334"
           }
         ]
       }
