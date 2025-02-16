@@ -38,11 +38,11 @@ Intel Core i9-10900T CPU 1.90GHz, 1 CPU, 20 logical and 10 physical cores
 ```
 | Method | Client            | Provider | Model         | Mean    | Error    | StdDev   | Median  |
 |------- |------------------ |--------- |-------------- |--------:|---------:|---------:|--------:|
-| **Chat**   | **aai-gpt-4o**        | **Azure AI** | **gpt-4o**        | **2.414 s** | **0.5845 s** | **1.6197 s** | **1.670 s** |
-| **Chat**   | **aai-gpt-4o-mini**   | **Azure AI** | **gpt-4o-mini**   | **2.748 s** | **0.5885 s** | **1.6599 s** | **1.954 s** |
-| **Chat**   | **oai-gpt-4o**        | **OpenAI**   | **gpt-4o**        | **2.646 s** | **0.2275 s** | **0.6563 s** | **2.493 s** |
-| **Chat**   | **oai-gpt-4o-mini**   | **OpenAI**   | **gpt-4o-mini**   | **2.845 s** | **0.2176 s** | **0.6173 s** | **2.738 s** |
-| **Chat**   | **xai-grok-2-latest** | **xAI**      | **grok-2-latest** | **1.629 s** | **0.1238 s** | **0.3651 s** | **1.618 s** |
-| **Chat**   | **xai-grok-beta**     | **xAI**      | **grok-beta**     | **1.731 s** | **0.1186 s** | **0.3402 s** | **1.697 s** |
+| **Chat**   | **aai-gpt-4o**        | **Azure AI** | **gpt-4o**        | **1.675 s** | **0.1482 s** | **0.4082 s** | **1.557 s** |
+| **Chat**   | **aai-gpt-4o-mini**   | **Azure AI** | **gpt-4o-mini**   | **1.726 s** | **0.2052 s** | **0.5687 s** | **1.535 s** |
+| **Chat**   | **oai-gpt-4o**        | **OpenAI**   | **gpt-4o**        | **2.013 s** | **0.2078 s** | **0.5759 s** | **1.870 s** |
+| **Chat**   | **oai-gpt-4o-mini**   | **OpenAI**   | **gpt-4o-mini**   | **2.757 s** | **0.2057 s** | **0.5666 s** | **2.671 s** |
+| **Chat**   | **xai-grok-2-latest** | **xAI**      | **grok-2-latest** | **1.803 s** | **0.1928 s** | **0.5342 s** | **1.701 s** |
+| **Chat**   | **xai-grok-beta**     | **xAI**      | **grok-beta**     | **2.028 s** | **0.1480 s** | **0.4100 s** | **1.994 s** |
 
 <!-- artifacts/results/AI.Benchmarks.ModelPerformance-report-github.md -->
