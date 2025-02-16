@@ -22,6 +22,7 @@ jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks
 
 if (-not $?) { throw 'Failed to create summary' }
 
+.\resolve-file-includes.ps1
 add *.json
 add *.md
 commit -m "🖉 Update AI benchmarks"

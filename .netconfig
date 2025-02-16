@@ -93,3 +93,9 @@
 	sha = 032439dbf180fca0539a5bd3a019f18ab3484b76
 	etag = da7c0104131bd474b52fc9bc9f9bda6470e24ae38d4fb9f5c4f719bc01370ab5
 	weak
+[file "resolve-file-includes.ps1"]
+	url = https://github.com/devlooped/actions-includes/blob/main/resolve-file-includes.ps1
+	sha = f8dba1e4ce78910971ac028cc8c572015deadba0
+
+	etag = 0a3acaa0f014bc8f5c31762e44e45fccf25f9ed9c690b9a1f92924522135b370
+	weak
