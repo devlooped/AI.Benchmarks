@@ -46,3 +46,10 @@ Intel Core i9-10900T CPU 1.90GHz, 1 CPU, 20 logical and 10 physical cores
 | **Chat**   | **xai-grok-beta**     | **xAI**      | **grok-beta**     | **1.678 s** | **0.1107 s** | **0.3194 s** | **1.655 s** |
 
 <!-- artifacts/results/AI.Benchmarks.ModelPerformance-report-github.md -->
+
+## Run locally
+
+You can trivially update (and optionally send a PR) the results by running the benchmarks locally.
+Simply fork the repository, clone it locally and run the `.\update.ps1` script from a `pwsh` prompt.
+
+The only requirement is to have `jq` installed and available in your `PATH`.
