@@ -1,14 +1,14 @@
 {
   "aai": {
-    "mean": 1.675,
+    "mean": 1.723,
     "model": "gpt-4o"
   },
   "oai": {
-    "mean": 2.012,
+    "mean": 1.677,
     "model": "gpt-4o"
   },
   "xai": {
-    "mean": 1.802,
+    "mean": 1.629,
     "model": "grok-2-latest"
   }
 }
