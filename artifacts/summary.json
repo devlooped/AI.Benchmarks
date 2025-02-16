@@ -1,32 +1,14 @@
-[
-  {
-    "Provider": "Azure AI",
-    "Model": "gpt-4o",
-    "Mean": 2.414
+{
+  "aai": {
+    "mean": 1.675,
+    "model": "gpt-4o"
   },
-  {
-    "Provider": "Azure AI",
-    "Model": "gpt-4o-mini",
-    "Mean": 2.748
+  "oai": {
+    "mean": 2.012,
+    "model": "gpt-4o"
   },
-  {
-    "Provider": "OpenAI",
-    "Model": "gpt-4o",
-    "Mean": 2.646
-  },
-  {
-    "Provider": "OpenAI",
-    "Model": "gpt-4o-mini",
-    "Mean": 2.844
-  },
-  {
-    "Provider": "xAI",
-    "Model": "grok-2-latest",
-    "Mean": 1.628
-  },
-  {
-    "Provider": "xAI",
-    "Model": "grok-beta",
-    "Mean": 1.731
+  "xai": {
+    "mean": 1.802,
+    "model": "grok-2-latest"
   }
-]
+}
