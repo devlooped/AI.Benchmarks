@@ -4,6 +4,8 @@ dotnet run -c Release
 
 if (-not $?) { throw 'Failed to run benchmarks' }
 
+popd;
+
 jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks 
 | .Benchmarks 
 | map(select((.Parameters 
@@ -23,7 +25,7 @@ jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks
 if (-not $?) { throw 'Failed to create summary' }
 
 .\resolve-file-includes.ps1
-add *.json
-add *.md
-commit -m "🖉 Update AI benchmarks"
+git add *.json
+git add *.md
+git commit -m "🖉 Update AI benchmarks"
 git push || write-host 'Failed to push updated benchmarks'
