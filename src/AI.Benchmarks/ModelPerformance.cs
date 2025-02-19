@@ -25,7 +25,7 @@ public class ModelPerformance
         new ChatMessage(ChatRole.User, "What is the meaning of life, the universe, and everything?"),
     ];
 
-    [Params("oai-gpt-4o", "oai-gpt-4o-mini", "aai-gpt-4o", "aai-gpt-4o-mini", "xai-grok-beta", "xai-grok-2-latest")]
+    [Params("oai-gpt-4o", "oai-gpt-4o-mini", "aai-gpt-4o", "aai-gpt-4o-mini", "xai-grok-beta", "xai-grok-2")]
     public string? Client { get; set; }
 
     [GlobalSetup]
@@ -61,13 +61,13 @@ public class ModelPerformance
                 {
                     Endpoint = new(configuration.ǃ("xAI:Endpoint"))
                 }).AsChatClient("grok-beta"));
-        collection.AddKeyedChatClient("xai-grok-2-latest",
+        collection.AddKeyedChatClient("xai-grok-2",
             new OpenAI.OpenAIClient(
                 new ApiKeyCredential(configuration.ǃ("xAI:Key")),
                 new OpenAI.OpenAIClientOptions
                 {
                     Endpoint = new(configuration.ǃ("xAI:Endpoint"))
-                }).AsChatClient("grok-2-latest"));
+                }).AsChatClient("grok-2"));
 
         services = collection.BuildServiceProvider();
     }
