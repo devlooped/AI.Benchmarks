@@ -5,25 +5,13 @@ dotnet run -c Release --no-launch-profile
 if (-not $?) { throw 'Failed to run benchmarks' }
 
 popd;
+pushd .\artifacts
 
-jq -r '.HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks 
-| .Benchmarks 
-| map(select((.Parameters 
-  | (contains("-mini") or contains("-beta")) | not)))
-| map({
-  provider: .Parameters[7:10],
-  model: .Parameters[11:],
-  mean: ((.Statistics.Mean / $ticks) | . * 10 | floor | . / 1000)
-}) 
-| reduce .[] as $item ({};
-  . + {($item.provider): {
-    mean: $item.mean,
-    model: $item.model
-  }}
-)' .\artifacts\results\AI.Benchmarks.ModelPerformance-report-full.json > .\artifacts\summary.json
+jq -r -f summary.jq .\results\AI.Benchmarks.ModelPerformance-report-full.json > summary.json
 
 if (-not $?) { throw 'Failed to create summary' }
 
+popd;
 .\resolve-file-includes.ps1
 git add *.json
 git add *.md
