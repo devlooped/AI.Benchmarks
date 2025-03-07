@@ -1,6 +1,6 @@
 ﻿git pull && `
 pushd .\src\AI.Benchmarks && `
-dotnet run -c Release 
+dotnet run -c Release --no-launch-profile
 
 if (-not $?) { throw 'Failed to run benchmarks' }
 
