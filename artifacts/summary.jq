@@ -1,6 +1,6 @@
 .HostEnvironmentInfo.ChronometerFrequency.Hertz as $ticks 
 | .Benchmarks 
-| map({
+| map(select(.Statistics.Mean != null) | {
   provider: .Parameters[7:10],
   model: .Parameters[11:],
   mean: ((.Statistics.Mean / $ticks) | . * 10 | floor | . / 1000)
