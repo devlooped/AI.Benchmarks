@@ -21,8 +21,6 @@ BenchmarkRunner.Run<ModelPerformance>(ManualConfig
 #endif
     );
 
-// Run benchmark with debug in-process mode
-//BenchmarkRunner.Run<ModelPerformance>(new DebugInProcessConfig(), args);
 
 class ProviderColumn : IColumn
 {

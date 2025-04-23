@@ -9,6 +9,10 @@ using static Microsoft.Extensions.Configuration.RequiredConfigurationExtensions;
 
 namespace AI.Benchmarks;
 
+#if !DEBUG
+[InvocationCount(10)]
+#endif
+[WarmupCount(2)]
 public class ModelPerformance
 {
     IServiceProvider? services;
@@ -25,7 +29,7 @@ public class ModelPerformance
         new ChatMessage(ChatRole.User, "What is the meaning of life, the universe, and everything?"),
     ];
 
-    [Params("oai-gpt-4o", "oai-gpt-4o-mini", "aai-gpt-4o", "aai-gpt-4o-mini", "xai-grok-3-beta", "xai-grok-3-mini-beta")]
+    [Params("oai-gpt-4o", "oai-gpt-4o-mini", "aai-gpt-4o", "aai-gpt-4o-mini", "xai-grok-3-beta", "xai-grok-3-fast-beta", "xai-grok-3-mini-beta", "xai-grok-3-mini-fast-beta")]
     public string? Client { get; set; }
 
     [GlobalSetup]
