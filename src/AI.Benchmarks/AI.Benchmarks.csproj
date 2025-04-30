@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -17,7 +17,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
     <PackageReference Include="System.Text.Json" Version="9.0.1" />
-    <PackageReference Include="ThisAssembly.Git" Version="2.0.11" PrivateAssets="all" />
+    <PackageReference Include="ThisAssembly.Git" Version="2.0.13" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
