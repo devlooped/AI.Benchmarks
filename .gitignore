@@ -4,12 +4,14 @@ artifacts
 pack
 TestResults
 results
+BenchmarkDotNet.Artifacts
 /app
 .vs
 .vscode
 .genaiscript
 .idea
 local.settings.json
+.env
 
 *.suo
 *.sdf
